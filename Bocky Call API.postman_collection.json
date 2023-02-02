@@ -1,0 +1,423 @@
+{
+	"info": {
+		"_postman_id": "26ebd490-d5aa-473c-8432-eefed5dbc054",
+		"name": "Bocky Call API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "5599801"
+	},
+	"item": [
+		{
+			"name": "Config Server",
+			"item": [
+				{
+					"name": "Obtiene configuración por defecto",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8889/application/default",
+							"host": [
+								"localhost"
+							],
+							"port": "8889",
+							"path": [
+								"application",
+								"default"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Obtiene configuración de Eureka Server",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8889/eureka-server/default",
+							"host": [
+								"localhost"
+							],
+							"port": "8889",
+							"path": [
+								"eureka-server",
+								"default"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Obtiene configuración de Paquetes de Redes Sociales",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8889/paquetes/default",
+							"host": [
+								"localhost"
+							],
+							"port": "8889",
+							"path": [
+								"paquetes",
+								"default"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Obtiene configuración de Paquetes de Internet",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8889/paquetesinternet/default",
+							"host": [
+								"localhost"
+							],
+							"port": "8889",
+							"path": [
+								"paquetesinternet",
+								"default"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Obtiene configuración de Recargas",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8889/recargas/default",
+							"host": [
+								"localhost"
+							],
+							"port": "8889",
+							"path": [
+								"recargas",
+								"default"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Obtiene configuración de Catalogo",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8889/catalogo/default",
+							"host": [
+								"localhost"
+							],
+							"port": "8889",
+							"path": [
+								"catalogo",
+								"default"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Obtiene configuración del API Gateway",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8889/api-gateway/default",
+							"host": [
+								"localhost"
+							],
+							"port": "8889",
+							"path": [
+								"api-gateway",
+								"default"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Obtiene configuración del servicio de Usuarios",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8889/servicio-usuarios/default",
+							"host": [
+								"localhost"
+							],
+							"port": "8889",
+							"path": [
+								"servicio-usuarios",
+								"default"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Obtiene configuración del servicio de OAuth",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8889/servicio-oauth/default",
+							"host": [
+								"localhost"
+							],
+							"port": "8889",
+							"path": [
+								"servicio-oauth",
+								"default"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Security (Público)",
+			"item": [
+				{
+					"name": "Obtener token",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "12345",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "front",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "username",
+									"value": "admin",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "12345",
+									"type": "text"
+								},
+								{
+									"key": "grant_type",
+									"value": "password",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{baseUrl}}/api/security/oauth/token",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"security",
+								"oauth",
+								"token"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Catalogo (Público)",
+			"item": [
+				{
+					"name": "Listar todo el catalogo",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/api/catalogo/catalogo",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"catalogo",
+								"catalogo"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Listar catalogo de redes",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/api/catalogo/catalogo?categoria=redes",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"catalogo",
+								"catalogo"
+							],
+							"query": [
+								{
+									"key": "categoria",
+									"value": "redes"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Listar catalogo de internet",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/api/catalogo/catalogo?categoria=internet",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"catalogo",
+								"catalogo"
+							],
+							"query": [
+								{
+									"key": "categoria",
+									"value": "internet"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Recargas (Con seguridad)",
+			"item": [
+				{
+					"name": "Registrar recarga",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX25hbWUiOiJhZG1pbiIsInNjb3BlIjpbInJlYWQiLCJ3cml0ZSJdLCJhcGVsbGlkbyI6IkRlbGdhZG8iLCJjb3JyZW8iOiJrZGVsZ2Fkb0BnbWFpbC5jb20iLCJpZCI6MiwiZXhwIjoxNjc0Nzg4MDA1LCJub21icmUiOiJLYXRoZXJpbmUiLCJhdXRob3JpdGllcyI6WyJST0xFX0FETUlOIiwiUk9MRV9VU0VSIl0sImp0aSI6IjczOGNkYmI3LWFkMWItNGVmYy1hYzc5LWJlMThhZjg4M2NlOCIsImNsaWVudF9pZCI6ImZyb250In0.kr9LLechNOBEBNScCdndll73cqMl24deLUnelSyJB24",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"userId\": 2,\r\n    \"numero\": \"950302674\",\r\n    \"monto\": 3.0\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/api/catalogo/catalogo/recargas",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"catalogo",
+								"catalogo",
+								"recargas"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Listar historial de recargas",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX25hbWUiOiJhZG1pbiIsInNjb3BlIjpbInJlYWQiLCJ3cml0ZSJdLCJhcGVsbGlkbyI6IkRlbGdhZG8iLCJjb3JyZW8iOiJrZGVsZ2Fkb0BnbWFpbC5jb20iLCJpZCI6MiwiZXhwIjoxNjc0Nzg4MDA1LCJub21icmUiOiJLYXRoZXJpbmUiLCJhdXRob3JpdGllcyI6WyJST0xFX0FETUlOIiwiUk9MRV9VU0VSIl0sImp0aSI6IjczOGNkYmI3LWFkMWItNGVmYy1hYzc5LWJlMThhZjg4M2NlOCIsImNsaWVudF9pZCI6ImZyb250In0.kr9LLechNOBEBNScCdndll73cqMl24deLUnelSyJB24",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/api/catalogo/catalogo/recargas/historial/2",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"catalogo",
+								"catalogo",
+								"recargas",
+								"historial",
+								"2"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "baseUrl",
+			"value": "http://localhost:8090",
+			"type": "string"
+		}
+	]
+}
